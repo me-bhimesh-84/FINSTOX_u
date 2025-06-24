@@ -8,58 +8,64 @@
 
 ## ✨ Features
 
-- 🔐 Simple Login & Signup
+- 🔐 JWT-based secure Login & Signup
 - 📊 Browse live NSE stock listings
 - 📈 View stock charts and price data
 - 🛒 Place buy orders directly in-app
 - 🧾 Track orders and portfolio holdings
 - ⭐ Watchlist support (add/remove favorite stocks)
-- 🚀 Built with React Native + Expo for fast, cross-platform performance
+- 🧠 Clean, intuitive UI built with React Native + Expo
 
 ---
 
 ## 📱 Screenshots
 
 ### 🔥 Splash & Authentication
-
-| Splash | Sign Up | Login |
-|--------|---------|-------|
-| ![](frontend/assets/screenshots/01-splash.jpg) | ![](frontend/assets/screenshots/02-signup.jpg) | ![](frontend/assets/screenshots/03-login.jpg) |
+<p align="center">
+  <img src="frontend/assets/screenshots/01-splash.jpg" width="30%"/>
+  <img src="frontend/assets/screenshots/02-signup.jpg" width="30%"/>
+  <img src="frontend/assets/screenshots/03-login.jpg" width="30%"/>
+</p>
 
 ---
 
 ### 🏠 Home & Stock Info
-
-| Home (Loading) | Stock List | Stock Details |
-|----------------|------------|----------------|
-| ![](frontend/assets/screenshots/04-home-loading.jpg) | ![](frontend/assets/screenshots/05-stock-list.jpg) | ![](frontend/assets/screenshots/06-stock-details.jpg) |
+<p align="center">
+  <img src="frontend/assets/screenshots/04-home-loading.jpg" width="30%"/>
+  <img src="frontend/assets/screenshots/05-stock-list.jpg" width="30%"/>
+  <img src="frontend/assets/screenshots/06-stock-details.jpg" width="30%"/>
+</p>
 
 ---
 
 ### 💸 Transactions & Orders
-
-| Buy Stock | Order Screen | Order History |
-|-----------|--------------|----------------|
-| ![](frontend/assets/screenshots/07-buy.jpg) | ![](frontend/assets/screenshots/08-order-screen.jpg) | ![](frontend/assets/screenshots/09-orders.jpg) |
+<p align="center">
+  <img src="frontend/assets/screenshots/07-buy.jpg" width="30%"/>
+  <img src="frontend/assets/screenshots/08-order-screen.jpg" width="30%"/>
+  <img src="frontend/assets/screenshots/09-orders.jpg" width="30%"/>
+</p>
 
 ---
 
 ### 👤 Profile & Portfolio
-
-| Profile | Holdings | Watchlist |
-|---------|----------|-----------|
-| ![](frontend/assets/screenshots/10-profile.jpg) | ![](frontend/assets/screenshots/11-holdings.jpg) | ![](frontend/assets/screenshots/12-watchlist.jpg) |
+<p align="center">
+  <img src="frontend/assets/screenshots/10-profile.jpg" width="30%"/>
+  <img src="frontend/assets/screenshots/11-holdings.jpg" width="30%"/>
+  <img src="frontend/assets/screenshots/12-watchlist.jpg" width="30%"/>
+</p>
 
 ---
 
 ## 🛠️ Tech Stack
 
 - **React Native** with [Expo](https://expo.dev/)
-- **React Navigation** for app routing
-- **AsyncStorage** for local token storage
-- **Custom Hooks** and clean component architecture
-- **Axios** for API integration
-- **Chart Kit** for displaying stock graphs
+- **React Navigation** for routing
+- **MongoDB** – cloud-hosted database
+- **JWT (JSON Web Token)** for secure authentication
+- **Axios** for API calls
+- **AsyncStorage** for local token handling
+- **React Native Chart Kit** for graphs
+- Modular architecture with custom hooks and reusable components
 
 ---
 
@@ -68,13 +74,13 @@
 ### Prerequisites
 
 - Node.js
-- Yarn or npm
 - Expo CLI (`npm install -g expo-cli`)
+- Android Studio / iOS Simulator / Expo Go App
 
 ### Installation
 
 ```bash
 git clone https://github.com/kanhaiyaongithub/Finstox.git
 cd Finstox/frontend
-yarn install        # or npm install
+npm install
 expo start
