@@ -2,7 +2,7 @@
 
 **Finstox** is a sleek, beginner-friendly stock trading app built using **React Native** with **Expo**. It enables users to sign up, view live stock data, place buy orders, and manage their portfolio with a beautiful and intuitive mobile interface.
 
-🔗 GitHub Repo: [kanhaiyaongithub/Finstox](https://github.com/kanhaiyaongithub/Finstox)
+🔗 [GitHub Repo: [me-bhimesh-84/FINSTOX_u.git/Finstox](https://github.com/me-bhimesh-84/FINSTOX_u.git)
 
 ---
 
