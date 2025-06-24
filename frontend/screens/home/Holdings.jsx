@@ -12,7 +12,7 @@ export default function Holdings() {
   const translateY = useRef(new Animated.Value(Dimensions.get("window").height)).current;
 
   useEffect(() => {
-    axios.get('http://192.168.234.232:8080/allholdings')
+    axios.get('http://192.168.0.104:8080/allholdings')
       .then(response => {
         setAllHoldings(response.data);
         // console.log(response.data);
@@ -126,6 +126,6 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     elevation: 5,
   },
-  sheetTitle: { fontSize: 20, fontWeight: 'bold', marginBottom: 10 },
+  sheetTitle: { fontSize: 24, fontWeight: 'bold', marginBottom: 10 },
   detail: { fontSize: 16, marginBottom: 6 }
 });

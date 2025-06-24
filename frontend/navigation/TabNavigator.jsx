@@ -40,7 +40,7 @@ export default function TabNavigator() {
     >
         <>
           <Tab.Screen name="Home" component={HomeScreen} options={{headerShown:true, title:'Finstox'}} />
-          <Tab.Screen name="Holdings" component={Holdings} />
+          <Tab.Screen name="Holdings" component={Holdings}  />
           <Tab.Screen name="Orders" component={Orders} />
           <Tab.Screen name="Profile" component={Account} />
         </>

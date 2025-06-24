@@ -2,6 +2,7 @@ import * as React from 'react';
 import { View, Text, StyleSheet, Image, ScrollView, KeyboardAvoidingView, Platform } from 'react-native';
 import { TextInput, Button } from 'react-native-paper';
 import {useNavigation} from '@react-navigation/native';
+import axios from 'axios';
 
 
 
@@ -13,6 +14,30 @@ export default function LoginScreen ()  {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [showPassword, setShowPassword] = React.useState(false);
+
+
+  function handleSignup () {
+    const userData = {
+      name:name,
+      phone:phone,
+      pan:pan,
+      email: email,
+      password: password,
+    };
+    axios.post('http://192.168.0.104:8080/register',userData).then((res)=>{
+      if(res.data.status === 'ok'){
+        navigation.replace('Login');
+      }else{
+        console.log('Login failed:', res.data.error);
+        alert('Invalid credentials');
+      }
+    }).catch((error) => {
+      console.error('Error during login:', error);
+      alert('An error occurred during login. Please try again.');
+    });
+  };
+
+
 
   return (
     <KeyboardAvoidingView
@@ -32,41 +57,41 @@ export default function LoginScreen ()  {
     <TextInput
       label="Name"
       mode="outlined"
-      activeOutlineColor="#548DF3"
+      activeOutlineColor="#023047"
       style={styles.input}
       value={name}
       onChangeText={text => setName(text)}/>
     <TextInput
       label="Phone"
       mode="outlined"
-      activeOutlineColor="#548DF3"
+      activeOutlineColor="#023047"
       style={styles.input}
       value={phone}
       onChangeText={text => setPhone(text)}/>
     <TextInput
       label="PAN Number"
       mode="outlined"
-      activeOutlineColor="#548DF3"
+      activeOutlineColor="#023047"
       style={styles.input}
       value={pan}
       onChangeText={text => setPan(text)}/>
     <TextInput
       label="Email"
       mode="outlined"
-      activeOutlineColor="#548DF3"
+      activeOutlineColor="#023047"
       style={styles.input}
       value={email}
       onChangeText={text => setEmail(text)}/>
     <TextInput
       label="Password"
-      activeOutlineColor="#548DF3"
+      activeOutlineColor="#023047"
       secureTextEntry={showPassword}
       right={<TextInput.Icon icon="eye" onPress={()=>{setShowPassword(!showPassword)}} />}
       mode="outlined"
       style={styles.input}
       value={password}
       onChangeText={password => setPassword(password)}/>
-      <Button style={styles.button} mode="contained" buttonColor='#548DF3' onPress={() => navigation.navigate('Login')}>
+      <Button style={styles.button} mode="contained" buttonColor='#219ebc' onPress={() => handleSignup()}>
         Create Account
       </Button>
     </View>
