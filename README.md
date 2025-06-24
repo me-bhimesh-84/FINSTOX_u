@@ -80,7 +80,7 @@
 ### Installation
 
 ```bash
-git clone https://github.com/kanhaiyaongithub/Finstox.git
+git clone https://github.com/me-bhimesh-84/Finstox_u.git
 cd Finstox/frontend
 npm install
 expo start
