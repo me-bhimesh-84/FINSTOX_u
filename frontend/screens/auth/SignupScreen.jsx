@@ -32,41 +32,41 @@ export default function LoginScreen ()  {
     <TextInput
       label="Name"
       mode="outlined"
-      activeOutlineColor="#023047"
+      activeOutlineColor="#548DF3"
       style={styles.input}
       value={name}
       onChangeText={text => setName(text)}/>
     <TextInput
       label="Phone"
       mode="outlined"
-      activeOutlineColor="#023047"
+      activeOutlineColor="#548DF3"
       style={styles.input}
       value={phone}
       onChangeText={text => setPhone(text)}/>
     <TextInput
       label="PAN Number"
       mode="outlined"
-      activeOutlineColor="#023047"
+      activeOutlineColor="#548DF3"
       style={styles.input}
       value={pan}
       onChangeText={text => setPan(text)}/>
     <TextInput
       label="Email"
       mode="outlined"
-      activeOutlineColor="#023047"
+      activeOutlineColor="#548DF3"
       style={styles.input}
       value={email}
       onChangeText={text => setEmail(text)}/>
     <TextInput
       label="Password"
-      activeOutlineColor="#023047"
+      activeOutlineColor="#548DF3"
       secureTextEntry={showPassword}
       right={<TextInput.Icon icon="eye" onPress={()=>{setShowPassword(!showPassword)}} />}
       mode="outlined"
       style={styles.input}
       value={password}
       onChangeText={password => setPassword(password)}/>
-      <Button style={styles.button} mode="contained" buttonColor='#219ebc' onPress={() => navigation.navigate('Login')}>
+      <Button style={styles.button} mode="contained" buttonColor='#548DF3' onPress={() => navigation.navigate('Login')}>
         Create Account
       </Button>
     </View>

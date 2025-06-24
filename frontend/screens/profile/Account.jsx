@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { View, Text, StyleSheet, Switch, TouchableOpacity, Image } from 'react-native';
+import { View, Text, StyleSheet, Switch, TouchableOpacity, Image, ScrollView } from 'react-native';
 import { Avatar } from 'react-native-elements';
 import { Ionicons, MaterialIcons, FontAwesome } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
@@ -13,6 +13,7 @@ export default function Account ({user}) {
   const styles = createStyles(isDarkMode);
 
   return (
+    <ScrollView>
     <View style={styles.container}>
       <View style={styles.header}>
         <Avatar
@@ -31,6 +32,7 @@ export default function Account ({user}) {
           <Text style={styles.addMoneyText}>+ Add money</Text>
         </TouchableOpacity>
       </View>
+      
 
       {renderOption('Orders', 'receipt', styles)}
       {renderOption('Account details', 'person', styles)}
@@ -44,6 +46,7 @@ export default function Account ({user}) {
         <Switch value={isDarkMode} onValueChange={toggleTheme} />
       </View>
     </View>
+    </ScrollView>
   );
 };
 
@@ -66,7 +69,7 @@ const createStyles = (darkMode) => StyleSheet.create({
     marginBottom: 20,
   },
   avatar: {
-    backgroundColor: '#1565C0',
+    backgroundColor: '#548DF3',
   },
   name: {
     fontSize: 22,
@@ -93,12 +96,12 @@ const createStyles = (darkMode) => StyleSheet.create({
     color: darkMode ? '#aaa' : '#555',
   },
   addMoneyButton: {
-    backgroundColor: '#1B5E20',
+    backgroundColor: '#01DF69',
     padding: 8,
     borderRadius: 8,
   },
   addMoneyText: {
-    color: '#fff',
+    color: '#090D12',
   },
   optionRow: {
     flexDirection: 'row',
@@ -114,13 +117,13 @@ const createStyles = (darkMode) => StyleSheet.create({
     flex: 1,
   },
   rightContent: {
-    backgroundColor: '#2E7D32',
+    backgroundColor: '#01DF69',
     paddingHorizontal: 8,
     paddingVertical: 4,
     borderRadius: 6,
   },
   referText: {
-    color: '#fff',
+    color: '#090D12',
     fontSize: 12,
   },
   switchContainer: {

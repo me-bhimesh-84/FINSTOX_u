@@ -50,7 +50,7 @@ export default function Orders() {
           <View>
             <View style={[styles.row, styles.headerRow]}>
               <Text style={styles.headerCell}>Company</Text>
-              <Text style={[styles.headerCell,{textAlign:'right'}]}>Price</Text>
+              <Text style={[styles.headerCell,{textAlign:'right',marginRight:8}]}>Price</Text>
             </View>
 
               {allOrders.map((stock, index) => {

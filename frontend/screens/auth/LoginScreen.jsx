@@ -41,13 +41,14 @@ export default function LoginScreen ()  {
       <Text style={styles.heading}>Login</Text>
     <TextInput
       label="Email"
+      activeOutlineColor="#548df3"
       mode="outlined"
       style={styles.input}
       value={email}
       onChangeText={text => setEmail(text)}/>
     <TextInput
           label="Password"
-          activeOutlineColor="#023047"
+          activeOutlineColor="#548df3"
           secureTextEntry={showPassword}
           right={<TextInput.Icon icon="eye" onPress={()=>{setShowPassword(!showPassword)}} />}
           mode="outlined"
@@ -56,14 +57,15 @@ export default function LoginScreen ()  {
           onChangeText={password => setPassword(password)}/>
       <Text style={{textAlign: 'right',marginBottom:5, textDecorationLine:'underline'}}>Forgot Password?</Text>
       <TouchableOpacity onPress={()=>{handleLogin()}}>
-      <Button style={styles.button} mode="contained" buttonColor='#219ebc' onPress={() => handleLogin()}>
+      <Button style={styles.button} mode="contained" buttonColor='#548df3' onPress={() => handleLogin()}>
         Login
       </Button>
       </TouchableOpacity>
       <Text style={{textAlign: 'center', marginTop: 10}}>OR</Text>
-      <Button style={styles.button}  mode="contained" buttonColor='#219ebc' onPress={() => navigation.navigate('Signup')}>
+      <Button style={styles.button}  mode="contained" buttonColor='#548df3' onPress={() => navigation.navigate('Signup')}>
         Signup
       </Button>
+      
     </View>
   );
 };
@@ -94,4 +96,5 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginTop: 10,
   },
+ 
 });

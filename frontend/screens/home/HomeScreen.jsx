@@ -14,7 +14,7 @@ export default function HomeScreen() {
       <View>
         <Searchbar
           placeholder="Search"
-          style={{ margin: 10, borderRadius: 10, }}
+          style={{ margin: 12, borderRadius: 12, }}
         />
       </View>
       </TouchableOpacity>
@@ -31,6 +31,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     // padding: 16,
+  },
+  title_fin: {
+    marginLeft: 20,
+    fontSize: 32,
+    fontWeight: 'bold',
+    textAlign: 'left',
+    marginVertical: 20,
+    color: '#090D12',
+    
   },
   title: {
     fontSize: 24,

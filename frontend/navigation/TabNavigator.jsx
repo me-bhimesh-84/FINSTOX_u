@@ -8,6 +8,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import HomeScreen from '../screens/home/HomeScreen';
 import Trending from '../screens/stocks/Search';
 import Account from '../screens/profile/Account';
+import { Tile } from 'react-native-elements';
 
 const Tab = createBottomTabNavigator();
 
@@ -24,7 +25,7 @@ export default function TabNavigator() {
     screenOptions={({ route }) => ({
       tabBarLabelStyle: { fontSize: 14 },
       tabBarStyle: { height: 60 ,marginBottom: 50, paddingBottom: 5 },
-      tabBarActiveTintColor: '#000',
+      tabBarActiveTintColor: '#548DF3',
       tabBarInactiveTintColor: '#888',
       tabBarLabel: route.name,
       tabBarIcon: ({ color, size }) => {
@@ -37,10 +38,12 @@ export default function TabNavigator() {
         },
     })}
     >
-        <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Holdings" component={Holdings} />
-        <Tab.Screen name="Orders" component={Orders} />
-        <Tab.Screen name="Profile" component={Account} />
+        <>
+          <Tab.Screen name="Home" component={HomeScreen} options={{headerShown:true, title:'Finstox'}} />
+          <Tab.Screen name="Holdings" component={Holdings} />
+          <Tab.Screen name="Orders" component={Orders} />
+          <Tab.Screen name="Profile" component={Account} />
+        </>
       </Tab.Navigator>
   );
 }

@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { View, Text, Button, StyleSheet, Image, ScrollView, FlatList, TouchableOpacity } from 'react-native';
 import axios from 'axios';
 import { useNavigation } from '@react-navigation/native';
+import { ActivityIndicator, MD2Colors } from 'react-native-paper';
+
 
 
 export default function NseMostActive() {
@@ -38,6 +40,7 @@ useEffect(() => {
 if(loading){
   return(
     <View>
+      <ActivityIndicator animating={true} color={MD2Colors.red800} />
       <Text style={{fontSize:25,textAlign:'center',marginTop:25,fontWeight:'bold'}}>Loading</Text>
     </View>
   )

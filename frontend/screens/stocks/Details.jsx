@@ -51,6 +51,9 @@ export default function Details() {
             <Button style={styles.sellBtn} mode="contained" onPress={() => navigation.navigate('Sell')}>
               <Text>SELL</Text>
             </Button>
+            
+
+            
         </View>
         <View style={{marginTop: 20, flexDirection: 'row', justifyContent: 'space-between'}}>
         <View>
@@ -67,6 +70,9 @@ export default function Details() {
             <Text style={styles.text}>Volume  <Text style={{fontWeight:'bold'}}>{item.volume}</Text></Text>
         </View>
         </View>
+        <Button style={styles.watch} mode="contained" onPress={() => navigation.navigate('WatchList')}>
+              <Text>Add to Watchlist</Text>
+            </Button>
     </View>
     </ScrollView>
   );
@@ -87,18 +93,18 @@ const styles = StyleSheet.create({
     color: '#424242',
   },
   buyBtn: {
-    backgroundColor: '#04b488',
+    backgroundColor: '#01DF69',
     padding: 10,
     width: '45%',
-    borderRadius: 6,
+    borderRadius: 8,
     alignItems: 'center',
     marginTop: 10,
   },
   sellBtn: {
-    backgroundColor: '#ed5533',
+    backgroundColor: '#FE4E48',
     padding: 10,
     width: '45%',
-    borderRadius: 6,
+    borderRadius: 8,
     alignItems: 'center',
     marginTop: 10,
   },
@@ -111,5 +117,10 @@ const styles = StyleSheet.create({
   },
   profit:{
     color: 'green'
+  },
+  watch:{
+    marginTop: 20,
+    backgroundColor: '#548DF3', // Blue color for the button
+    padding: 10,  
   },
 });
